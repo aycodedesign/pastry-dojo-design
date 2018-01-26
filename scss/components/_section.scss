@@ -1,0 +1,34 @@
+section {
+  min-height: 400px;
+  padding: 25px;
+  // margin-bottom: 10px;
+
+  div {
+    width: 75%;
+    margin: auto;
+    padding: 25px;
+  }
+}
+
+#sect1 {
+  background-color: $off-white;
+}
+
+#sect2 {
+	background-color: $red;
+}
+
+#sect3 {
+	background-color: $charcoal;
+}
+#sect4 {
+  background-color: $off-white;
+}
+
+#sect5 {
+	background-color: $red;
+}
+
+#sect6 {
+	background-color: $charcoal;
+}

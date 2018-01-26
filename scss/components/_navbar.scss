@@ -1,0 +1,40 @@
+nav {
+  text-align: center;
+
+ a {
+    display: inline-block;
+    background-color: $yellow;
+    padding: 10px;
+    margin: 20px 5px 20px 5px;
+    border-radius: 5px;
+    color: $black;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: $red;
+    color: $white;
+  }
+
+  img {
+	  float: left;
+  }
+}
+
+/*holds space to prevent top of page from jumping when scrolling down*/
+div.navspace {
+  height: 100px;
+}
+
+/*when body is labeled 'pinned', fix all in 'branding' at the coordinates*/
+body.pinned div.branding {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $charcoal;
+
+}
