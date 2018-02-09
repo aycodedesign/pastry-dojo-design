@@ -444,7 +444,7 @@ nav {
     display: inline-block;
     background-color: rgba(228, 169, 37, 0.75);
     padding: 10px;
-    margin: 20px 5px 20px 5px;
+    margin: 20px 20px;
     border-radius: 5px;
     color: #000000;
     width: 100px;
@@ -465,7 +465,7 @@ body.pinned div.branding {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(48, 48, 48, 0.9); }
+  background-color: rgba(255, 255, 255, 0.75); }
 
 footer {
   color: #ffffff;
@@ -475,7 +475,7 @@ section {
   min-height: 1000px;
   padding: 25px; }
   section div {
-    width: 75%;
+    width: 50%;
     margin: auto;
     padding: 25px; }
 
