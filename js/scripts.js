@@ -1,44 +1,45 @@
 // document ready says 'wait until document is ready before doing anything else'
-$(document).ready(function() {
+$(document).ready(function () {
 
-  /*-------------------------------------
-  | Animating The Scroll
-  -------------------------------------*/
+    /*-------------------------------------
+    | Animating The Scroll
+    -------------------------------------*/
 
-  //whenever a nav anchor is clicked, do what is in the brackets
-  $('nav a').click(function() {
+    //whenever a nav anchor is clicked, do what is in the brackets
+    $('a').click(function () {
 
-    //1. kill the default behavior
-    event.preventDefault();
+        //1. kill the default behavior
+        event.preventDefault();
 
-    //2. figure out which section to animate to
-    //this variable adjusts WHERE clickscroll stops
-    var offset = 75;
+        //2. figure out which section to animate to
+        
+        // this variable adjusts where clickscroll stops
+        var offset = 55;
 
-    var whichSect = $(this).attr('href');
+        var whichSection = $(this).attr('href');
 
-    //3. animate to section
+        //3. animate to section
 
-    //https://stackoverflow.com/questions/832860/how-to-scroll-the-window-using-jquery-scrollto-function
-    $('html, body').animate({
-      scrollTop: $(whichSect).offset().top - offset
-  }, 1000);
-  });
+        //https://stackoverflow.com/questions/832860/how-to-scroll-the-window-using-jquery-scrollto-function
+        $('html, body').animate({
+            scrollTop: $(whichSection).offset().top - offset
 
-  //determines how far down the page navbar sticks
-  $(window).scroll(function() {
-    var howFar = $(window).scrollTop();
-    console.log(howFar);
+        }, 750);
+    });
 
-    if (howFar >= 1) {
-      $('body').addClass('pinned');
-      // console.log('pinned');
-    } else {
-      {
-        $('body').removeClass('pinned');
-        // console.log('unpinned');
-      }
-    }
-  });
+    //determines how far down the page navbar sticks
+    $(window).scroll(function () {
+        var howFar = $(window).scrollTop();
+        console.log(howFar);
 
+        if (howFar >= 352) {
+            $('nav').addClass('pinned');
+            // console.log('pinned');
+        } else {
+            {
+                $('nav').removeClass('pinned');
+                // console.log('unpinned');
+            }
+        }
+    });
 });
