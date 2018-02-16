@@ -7,7 +7,7 @@ section {
 
 .hero {
     min-height: 400px;
-    background: gray;
+    background: rgba(128, 128, 128, 0.493);
 }
 
 #section1 {
@@ -15,20 +15,31 @@ section {
 }
 
 #section1:hover {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.25);
 }
 
 #section2 {
     outline: solid 2px blue;
 }
 
+#section2:hover {
+    background-color: rgba(0, 0, 255, 0.25);
+}
+
 #section3 {
     outline: solid 2px green;
 }
 
+#section3:hover {
+    background-color: rgba(0, 255, 0, 0.25);
+}
+
 #section4 {
     outline: solid 2px orange;
-    padding: 20px;
+}
+
+#section4:hover {
+    background-color: rgba(255, 162, 0, 0.25);
 }
 
 
@@ -39,9 +50,22 @@ nav {
 }
 
 .photoshop:hover {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.75);
+}
+
+.illustrator:hover {
+    background-color: rgba(0, 0, 255, 0.75);
+}
+
+.javascript:hover {
+    background-color: rgba(0, 255, 0, 0.75);
+}
+
+.contactme:hover {
+    background-color: rgba(255, 162, 0, 0.75);
 }
 
 .pinned {
-    background-color: rgba(255, 255, 255, .75)
+    background-color: rgba(0, 0, 0, 0.75);
+    
 }

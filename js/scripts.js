@@ -23,7 +23,6 @@ $(document).ready(function () {
         //https://stackoverflow.com/questions/832860/how-to-scroll-the-window-using-jquery-scrollto-function
         $('html, body').animate({
             scrollTop: $(whichSection).offset().top - offset
-
         }, 750);
     });
 
@@ -33,11 +32,11 @@ $(document).ready(function () {
         console.log(howFar);
 
         if (howFar >= 352) {
-            $('nav').addClass('pinned');
+            $('nav').addClass('pinned navbar-dark');
             // console.log('pinned');
         } else {
             {
-                $('nav').removeClass('pinned');
+                $('nav').removeClass('pinned navbar-dark');
                 // console.log('unpinned');
             }
         }
