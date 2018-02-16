@@ -1,3 +1,28 @@
+body {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+/* HERO */
+
+.hero {
+    min-height: 800px;
+    background: rgba(128, 128, 128, 0.493);
+}
+
+.hero-plate {
+	background-image: url('../img/hero-plate.png');
+	background-position: top right;
+	width: 650px;
+	height: 800px;
+	position: absolute;
+	top: 0;
+	right: 45px;
+}
+
+
 /* SECTIONS */
 
 section {
@@ -5,25 +30,12 @@ section {
     min-height: 1000px;
 }
 
-.hero {
-    min-height: 400px;
-    background: rgba(128, 128, 128, 0.493);
-}
-
 #section1 {
     outline: solid 2px red;
 }
 
-#section1:hover {
-    background-color: rgba(255, 0, 0, 0.25);
-}
-
 #section2 {
     outline: solid 2px blue;
-}
-
-#section2:hover {
-    background-color: rgba(0, 0, 255, 0.25);
 }
 
 #section3 {
@@ -41,6 +53,7 @@ section {
 #section4:hover {
     background-color: rgba(255, 162, 0, 0.25);
 }
+
 
 
 /* NAVBAR */
@@ -67,5 +80,5 @@ nav {
 
 .pinned {
     background-color: rgba(0, 0, 0, 0.75);
-    
+
 }
