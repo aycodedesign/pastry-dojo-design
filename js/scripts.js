@@ -52,7 +52,7 @@ $(document).ready(function () {
       <div class="item h${h} v${v}">
         <img src="./img/${randomNumber(12)}.jpg">
         <div class="item__overlay">
-          <button>View-></button>  
+          <button>view</button>  
         </div>
       </div>
     `;
