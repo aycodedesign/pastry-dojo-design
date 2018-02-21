@@ -12,7 +12,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         //2. figure out which section to animate to
-        
+
         // this variable adjusts where clickscroll stops
         var offset = 55;
 
@@ -24,7 +24,6 @@ $(document).ready(function () {
         $('html, body').animate({
             scrollTop: $(whichSection).offset().top - offset
         }, 750);
-    });
 
     //determines how far down the page navbar sticks
     $(window).scroll(function () {
@@ -52,7 +51,7 @@ $(document).ready(function () {
       <div class="item h${h} v${v}">
         <img src="./img/${randomNumber(12)}.jpg">
         <div class="item__overlay">
-          <button>view</button>  
+          <button>view</button>
         </div>
       </div>
     `;
@@ -73,7 +72,7 @@ $(document).ready(function () {
     }
 
     const digits = Array.from({
-        length: 50
+        length: 2
     }, () => [randomNumber(4), randomNumber(4)]).concat([
         [1, 1],
         [1, 1],

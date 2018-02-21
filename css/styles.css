@@ -6,9 +6,10 @@ body {
     width: 1200px;
     margin: 0 auto;
     position: relative;
+	background-color: #000000;
 }
 
-h1 {
+h1, h2, h3 {
     text-align: center;
 }
 
@@ -16,12 +17,15 @@ p {
     color: white;
 }
 
+.featured {
+	padding: 20px;
 
+}
 /* HERO */
 
 .hero {
-    /* min-height: 800px; */
-    background: rgba(128, 128, 128, 0.493);
+     min-height: 800px; 
+    background: rgba(128, 128, 128, 0.25);
 }
 
 .hero-plate {
@@ -31,7 +35,7 @@ p {
     height: 800px;
     position: absolute;
     top: 0;
-    right: 45px;
+    right: 0px;
 }
 
 
@@ -99,7 +103,7 @@ a.contactme:hover {
     grid-template-columns: repeat(auto-fill, 100px);
     grid-auto-rows: 100px;
     grid-auto-flow: dense;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 .item {
