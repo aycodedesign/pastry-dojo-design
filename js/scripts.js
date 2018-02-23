@@ -72,11 +72,9 @@ $(document).ready(function () {
     }
 
     const digits = Array.from({
-<<<<<<< HEAD
+
         length: 10
-=======
-        length: 2
->>>>>>> e40512cd61cf87b2877a023fce06f3be9d427244
+
     }, () => [randomNumber(4), randomNumber(4)]).concat([
         [1, 1],
         [1, 1],

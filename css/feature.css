@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+	background-color: #1B2F47;
+	margin: 0 auto;
+}
+
+body {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+img {
+	position: absolute;
+	width: 90%;
+	background-position: top left;
+	top: 200px;
+}
+
+.info {
+	background-image: url('../img/info.png');
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	width: 48px;
+	height: 48px;
+}
+
+.close {
+	background-image: url('../img/close.png');
+	position: absolute;
+	top: 20px;
+	left: 1080px;
+	width: 50px;
+	height: 50px;
+}

@@ -1,1 +1,1 @@
-*{box-sizing:border-box}body{width:1200px;margin:0 auto;position:relative;background-color:#00f}img{position:absolute;width:100%;background-position:top left;top:50%;left:50%}
+body,html{margin:0 auto}*{box-sizing:border-box}html{background-color:#00f}body{width:1200px;position:relative}.info,img{position:absolute}img{width:90%;background-position:top left;top:200px}.info{background-image:url(../img/info.png);top:20px;left:40px;width:48px;height:48px}

@@ -3,19 +3,16 @@
 }
 
 body {
-<<<<<<< HEAD
     max-width: 1200px;
     margin: auto;
 }
 
 html {
     text-align: center;
-=======
     width: 1200px;
     margin: 0 auto;
     position: relative;
 	background-color: #000000;
->>>>>>> e40512cd61cf87b2877a023fce06f3be9d427244
 }
 
 h1, h2, h3 {
@@ -33,18 +30,8 @@ p {
 /* HERO */
 
 .hero {
-     min-height: 800px; 
+     min-height: 800px;
     background: rgba(128, 128, 128, 0.25);
-}
-
-.hero-plate {
-    background-image: url('../img/hero-plate.png');
-    background-position: top right;
-    width: 650px;
-    height: 800px;
-    position: absolute;
-    top: 0;
-    right: 0px;
 }
 
 
