@@ -3,9 +3,12 @@
 }
 
 body {
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+html {
+    text-align: center;
 }
 
 h1 {
@@ -38,7 +41,7 @@ p {
 /* SECTIONS */
 
 section {
-    padding: 25px;
+    padding: 55px;
     min-height: 1000px;
 }
 
@@ -131,10 +134,10 @@ a.contactme:hover {
 
 .item__overlay button {
     background: none;
-    border 2px solid white;
+    /* border 2px solid white; */
     color: white;
     text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     padding: 5px;
 }
 
@@ -185,7 +188,6 @@ a.contactme:hover {
 
 .overlay-inner {
     background: white;
-    width: 700px;
     padding: 20px;
 }
 

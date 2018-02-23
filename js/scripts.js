@@ -73,7 +73,7 @@ $(document).ready(function () {
     }
 
     const digits = Array.from({
-        length: 50
+        length: 10
     }, () => [randomNumber(4), randomNumber(4)]).concat([
         [1, 1],
         [1, 1],
@@ -85,7 +85,7 @@ $(document).ready(function () {
         [1, 1],
         [1, 1]
     ]);
-    // console.log(digits);
+    console.log(digits);
 
     const html = digits.map(generateHTML).join('');
     // console.log(html);
