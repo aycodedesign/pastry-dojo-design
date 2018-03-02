@@ -8,6 +8,10 @@ body {
     background-color: rgba(255, 255, 255, 0);
 }
 
+.container {
+  box-shadow: 0px 5px 15px white;
+}
+
 html {
     text-align: center;
     width: 1200px;
@@ -26,8 +30,9 @@ p {
     color: white;
 }
 
-.featured {
-    padding: 20px;
+.feature {
+    left: 100px;
+    top: 100px;
 }
 
 
@@ -37,7 +42,7 @@ p {
     height: 619px;
     background-image: url('../img/hero-image.png');
     background-repeat: no-repeat;
-    background-size: 1100px;
+    background-size: 1110px;
 }
 
 
@@ -46,23 +51,36 @@ p {
 section {
     padding: 55px;
     min-height: 1000px;
-    width: 1100px;
+    width: 1110px;
+    outline: 2px black solid;
 }
 
 #section1 {
-    outline: solid 2px red;
+    background-color: white;
+    background-image: url('../img/label/photoshop.png');
+    background-repeat: no-repeat;
+    background-position: 25px 50%;
 }
 
 #section2 {
-    outline: solid 2px blue;
+  background-color: white;
+  background-image: url('../img/label/illustrator.png');
+  background-repeat: no-repeat;
+  background-position: 950px 50%;
 }
 
 #section3 {
-    outline: solid 2px green;
+  background-color: white;
+  background-image: url('../img/label/javascript.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 #section4 {
-    outline: solid 2px orange;
+  background-color: white;
+  background-image: url('../img/label/contactme.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 
