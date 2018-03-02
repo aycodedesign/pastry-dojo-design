@@ -5,6 +5,7 @@
 body {
     max-width: 1200px;
     margin: auto;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 html {
@@ -12,10 +13,12 @@ html {
     width: 1200px;
     margin: 0 auto;
     position: relative;
-	background-color: #000000;
+    background-color: #363636;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
 }
 
@@ -24,14 +27,17 @@ p {
 }
 
 .featured {
-	padding: 20px;
-
+    padding: 20px;
 }
+
+
 /* HERO */
 
 .hero {
-     min-height: 800px;
-    background: rgba(128, 128, 128, 0.25);
+    height: 619px;
+    background-image: url('../img/hero-image.png');
+    background-repeat: no-repeat;
+    background-size: 1100px;
 }
 
 
@@ -40,6 +46,7 @@ p {
 section {
     padding: 55px;
     min-height: 1000px;
+    width: 1100px;
 }
 
 #section1 {
@@ -70,23 +77,23 @@ nav {
 }
 
 a.photoshop:hover {
-    background-color: rgba(255, 0, 0, .75);
+    font-weight: 500;
 }
 
 a.illustrator:hover {
-    background-color: rgba(0, 0, 255, .75);
+    font-weight: 500;
 }
 
 a.javascript:hover {
-    background-color: rgba(0, 255, 0, .75);
+    font-weight: 500;
 }
 
 a.contactme:hover {
-    background-color: rgba(255, 162, 0, .75);
+    font-weight: 500;
 }
 
 
-/* GALLERY */
+/* GALLERY (not used right now)*/
 
 .close {
     background: none;
