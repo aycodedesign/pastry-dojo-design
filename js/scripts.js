@@ -30,13 +30,11 @@ $(document).ready(function () {
         var howFar = $(window).scrollTop();
         console.log(howFar);
 
-        if (howFar >= 352) {
+        if (howFar >= 563) {
             $('nav').addClass('pinned navbar-dark');
-            // console.log('pinned');
         } else {
             {
                 $('nav').removeClass('pinned navbar-dark');
-                // console.log('unpinned');
             }
         }
     });
@@ -98,5 +96,5 @@ $(document).ready(function () {
 
     // overlayClose.addEventListener('click', close);
 
-}); 
+});
 }); //end READY FUNCTION
