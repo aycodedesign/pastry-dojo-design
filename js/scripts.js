@@ -14,7 +14,7 @@ $(document).ready(function () {
         //2. figure out which section to animate to
 
         // this variable adjusts where clickscroll stops
-        var offset = 55;
+        var offset = 78;
 
         var whichSection = $(this).attr('href');
 
@@ -30,7 +30,7 @@ $(document).ready(function () {
         var howFar = $(window).scrollTop();
         console.log(howFar);
 
-        if (howFar >= 563) {
+        if (howFar >= 550) {
             $('nav').addClass('pinned navbar-dark');
         } else {
             {
