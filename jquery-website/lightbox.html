@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
+  <script src="js/lightbox.js"></script>
+
+  <title>GWDA 243 - Lightbox</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      transition: background-color 1s ease-in;
+      padding-bottom: 20px;
+      min-height: 600px;
+    }
+
+    /*for slow color transition between pages*/
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+
+    a img {
+      width: 200px;
+      height: 200px;
+      border: 3px solid white;
+      display: block;
+      margin: auto;
+      margin-bottom: 10px
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .centerpic {
+      display: block;
+      text-align: center;
+    }
+
+    .fa {
+      padding: 10px;
+      font-size: 50px;
+      width: auto;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px 20px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-instagram {
+      color: white;
+      background: lightblue;
+    }
+
+    .whitefont {
+      font-size: 40px;
+      color: #ffffff;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function() {
+      window.onload = function() {
+        document.body.style.backgroundColor = "#166BA2";
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="main clearfix">
+      <nav id="menu" class="nav">
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="icon">
+                <i aria-hidden="true" class="glyphicon glyphicon-home"></i>
+              </span>
+              <span>home</span>
+            </a>
+          </li>
+          <li>
+            <a href="whattimeisit.html">
+              <span class="icon">
+                <i aria-hidden="true" class="glyphicon glyphicon-time"></i>
+              </span>
+              <span>what time is it?</span>
+            </a>
+          </li>
+          <li>
+            <a href="slidey.html">
+              <span class="icon">
+                <i aria-hidden="true" class="glyphicon glyphicon-picture"></i>
+              </span>
+              <span>slidey</span>
+            </a>
+          </li>
+          <li>
+            <a href="lightbox.html">
+              <span class="icon">
+                <i aria-hidden="true" class="glyphicon glyphicon-modal-window"></i>
+              </span>
+              <span>lightbox</span>
+            </a>
+          </li>
+          <li>
+            <a href="these2.html">
+              <span class="icon">
+                <i aria-hidden="true" class="glyphicon glyphicon-ban-circle"></i>
+              </span>
+              <span>these 2</span>
+            </a>
+          </li>
+          <li>
+            <a href="dontwork.html">
+              <span class="icon">
+                <i aria-hidden="true" class="glyphicon glyphicon-ban-circle"></i>
+              </span>
+              <span>don't work</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- photo gallery with lightbox2 -->
+      <div class="container-fluid">
+        <h1>A shameless plug for my girlfriend's bakery business!</h1>
+        <span class="centerpic"><a href="https://www.instagram.com/sweet_jems_bakery_/" class="fa fa-instagram"></a></span>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <a href="images/splitpie.png" data-lightbox="pics" title="Stonefruit Pie" alt="Stonefruit Pie"><img src="images/splitpie_thumb.png" alt="Stonefruit Pie"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <a href="images/scotchcookies.png" data-lightbox="pics" title="Scotch & Chocolate Chip Cookies" alt="Scotch & Chocolate Chip Cookie"><img src="images/scotchcookies_thumb.png" alt="Scotch & Chocolate Chip Cookie"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <a href="images/sammiches.png" data-lightbox="pics" title="Patriotic Cream Puffs" alt="Patriotic Cream Puffs"><img src="images/sammiches_thumb.png" alt="Patriotic Cream Puffs"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <a href="images/gradpops.png" data-lightbox="pics" title="Graduation Pops" alt="Graduation Pops"><img src="images/gradpops_thumb.png" alt="Graduation Pops"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <a href="images/preserves.png" data-lightbox="pics" title="Stonefruit Preserves with Cake on the Bottom" alt="Stonefruit Preserves"><img src="images/preserves_thumb.png" alt="Stonefruit Preserves"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <a href="images/weddingcake.png" data-lightbox="pics" title="Awesome Wedding Cake" alt="Wedding Cake"><img src="images/weddingcake_thumb.png" alt="Wedding Cake"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END clearfix -->
+  </div>
+  <!-- /container -->
+</body>
+
+</html>

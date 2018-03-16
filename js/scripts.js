@@ -6,7 +6,7 @@ $(document).ready(function () {
     -------------------------------------*/
 
     //whenever a nav anchor is clicked, do what is in the brackets
-    $('a').click(function () {
+    $('nav a').click(function () {
 
         //1. kill the default behavior
         event.preventDefault();
@@ -14,7 +14,7 @@ $(document).ready(function () {
         //2. figure out which section to animate to
 
         // this variable adjusts where clickscroll stops
-        var offset = 78;
+        var offset = 275;
 
         var whichSection = $(this).attr('href');
 
@@ -30,7 +30,7 @@ $(document).ready(function () {
         var howFar = $(window).scrollTop();
         console.log(howFar);
 
-        if (howFar >= 550) {
+        if (howFar >= 6) {
             $('nav').addClass('pinned navbar-dark');
         } else {
             {
@@ -38,63 +38,6 @@ $(document).ready(function () {
             }
         }
     });
-
-    // const gallery = document.querySelector('.gallery');
-    // const overlay = document.querySelector('.overlay');
-    // const overlayImage = overlay.querySelector('img');
-    // const overlayClose = overlay.querySelector('.close');
-
-    // function generateHTML([h, v]) {
-    //     return `
-    //   <div class="item h${h} v${v}">
-    //     <img src="./img/${randomNumber(12)}.jpg">
-    //     <div class="item__overlay">
-    //       <button>view</button>
-    //     </div>
-    //   </div>
-    // `;
-    // }
-
-    // function randomNumber(limit) {
-    //     return Math.floor(Math.random() * limit) + 1;
-    // }
-
-    // function handleClick(e) {
-    //     const src = e.currentTarget.querySelector('img').src;
-    //     overlayImage.src = src;
-    //     overlay.classList.add('open');
-    // }
-
-    // function close() {
-    //     overlay.classList.remove('open');
-    // }
-
-    // const digits = Array.from({
-
-    //     length: 10
-
-    // }, () => [randomNumber(4), randomNumber(4)]).concat([
-    //     [1, 1],
-    //     [1, 1],
-    //     [1, 1],
-    //     [1, 1],
-    //     [1, 1],
-    //     [1, 1],
-    //     [1, 1],
-    //     [1, 1],
-    //     [1, 1]
-    // ]);
-    // console.log(digits);
-
-    // const html = digits.map(generateHTML).join('');
-    // // console.log(html);
-    // gallery.innerHTML = html;
-
-    // const items = document.querySelectorAll('.item');
-
-    // items.forEach(item => item.addEventListener('click', handleClick));
-
-    // overlayClose.addEventListener('click', close);
-
 });
+
 }); //end READY FUNCTION

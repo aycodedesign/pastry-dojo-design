@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
+  <script src="js/lightbox.js"></script>
+
+  <title>GWDA 243 - Time</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      transition: background-color 1s ease-in;
+      padding-bottom: 20px;
+      min-height: 600px;
+    }
+
+    /*for slow color transition between pages*/
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .table-fixed {
+      table-layout: fixed;
+    }
+
+    #main {
+      height: 100%;
+    }
+
+    #main td {
+      text-align: center;
+    }
+
+    #time {
+      font-size: 100px;
+    }
+
+    .transitions {
+      -webkit-transition: 1s all;
+      -moz-transition: 1s all;
+      -ms-transition: 1s all;
+      -o-transition: 1s all;
+      transition: 1s all;
+    }
+
+    .half-width {
+      width: 50%;
+    }
+
+    .half-width.opened {
+      width: 80%;
+    }
+
+    .pos-rel {
+      position: relative;
+    }
+
+    .abs-bottom {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+    }
+
+    .jquery-clock {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background-image: url(http://pietrasiak.com/images/clock.png);
+      -webkit-background-size: cover;
+      background-size: cover;
+      list-style: none;
+      padding: 0;
+      margin: auto;
+    }
+
+    .jquery-clock.medium {
+      width: 300px;
+      height: 300px;
+    }
+
+    /*.jquery-clock.small {
+	  width: 75%;
+	  height: 75%;
+	}*/
+
+    .jquery-clock-sec,
+    .jquery-clock-min,
+    .jquery-clock-hour {
+      position: absolute;
+      width: 10%;
+      height: 100%;
+      top: 0px;
+      left: 45%;
+      background-position: center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .jquery-clock-sec {
+      background-image: url(http://pietrasiak.com/images/sechand.png);
+      z-index: 3;
+    }
+
+    .jquery-clock-min {
+      background-image: url(http://pietrasiak.com/images/minhand.png);
+      z-index: 2;
+    }
+
+    .jquery-clock-hour {
+      background-image: url(http://pietrasiak.com/images/hourhand.png);
+      z-index: 1;
+    }
+
+    .jquery-clock.white {
+      background-image: url(http://pietrasiak.com/images/clock-white.png);
+    }
+
+    .jquery-clock.white .jquery-clock-sec {
+      background-image: url(http://pietrasiak.com/images/sechand-white.png);
+      z-index: 3;
+    }
+
+    .jquery-clock.white .jquery-clock-min {
+      background-image: url(http://pietrasiak.com/images/minhand-white.png);
+      z-index: 2;
+    }
+
+    .jquery-clock.white .jquery-clock-hour {
+      background-image: url(http://pietrasiak.com/images/hourhand-white.png);
+      z-index: 1;
+    }
+
+    .jquery-clock-pin {
+      position: absolute;
+      background: #fff;
+      left: 50%;
+      top: 50%;
+      height: 3%;
+      width: 3%;
+      z-index: 10;
+      border-radius: 50%;
+      margin: -1.5%;
+    }
+
+    .jquery-clock.white .jquery-clock-pin {
+      background-color: #000;
+    }
+
+    .jquery-clock-transitions {
+      -webkit-transition: all 1s cubic-bezier(.01, 1.81, 0, .88);
+      -moz-transition: all 1s cubic-bezier(.01, 1.81, 0, .88);
+      -o-transition: all 1s cubic-bezier(.01, 1.81, 0, .88);
+
+    }
+
+    .pos-rel:hover {
+      -webkit-opacity: 0.2;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function() {
+
+      window.onload = function() {
+        document.body.style.backgroundColor = '#E9931A';
+      }
+
+      $('*[data-jquery-clock]').each(function() {
+        var t = $(this);
+
+        var seconds = new Date().getSeconds(),
+          hours = new Date().getHours(),
+          mins = new Date().getMinutes(),
+          sdegree = seconds * 6,
+          hdegree = hours * 30 + (mins / 2),
+          mdegree = mins * 6;
+
+        var updateWatch = function() {
+          sdegree += 6;
+          if (sdegree % 360 == 0) {
+            mdegree += 6;
+          }
+          hdegree += (0.1 / 12);
+
+          var srotate = "rotate(" + sdegree + "deg)",
+            hrotate = "rotate(" + hdegree + "deg)",
+            mrotate = "rotate(" + mdegree + "deg)";
+
+          $(".jquery-clock-sec", t).css({
+            "-moz-transform": srotate,
+            "-webkit-transform": srotate,
+            '-ms-transform': srotate
+          });
+          $(".jquery-clock-hour", t).css({
+            "-moz-transform": hrotate,
+            "-webkit-transform": hrotate,
+            '-ms-transform': hrotate
+          });
+          $(".jquery-clock-min", t).css({
+            "-moz-transform": mrotate,
+            "-webkit-transform": mrotate,
+            '-ms-transform': mrotate
+          });
+        }
+
+        updateWatch();
+
+        setInterval(function() {
+          $(".jquery-clock-sec, .jquery-clock-hour, .jquery-clock-min").addClass('jquery-clock-transitions');
+          updateWatch();
+        }, 1000);
+
+        $(window).focus(function() {
+          $(".jquery-clock-sec, .jquery-clock-hour, .jquery-clock-min").addClass('jquery-clock-transitions');
+        });
+
+        $(window).blur(function() {
+          $(".jquery-clock-sec, .jquery-clock-hour, .jquery-clock-min").removeClass('jquery-clock-transitions');
+        });
+      });
+
+
+      //shows time in numbers
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML = h + ":" + m + ":" + (s + 1);
+        t = setTimeout(function() {
+          startTime()
+        }, 500);
+      }
+      startTime();
+    });
+  </script>
+
+</head>
+
+<body onload="startTime()">
+
+  <div class="container">
+    <div class="main clearfix">
+      <nav id="menu" class="nav">
+        <ul>
+          <li>
+            <a href="index.html">
+                <span class="icon">
+                  <i aria-hidden="true" class="glyphicon glyphicon-home"></i>
+                </span>
+                <span>home</span>
+              </a>
+          </li>
+          <li>
+            <a href="whattimeisit.html">
+                <span class="icon">
+                  <i aria-hidden="true" class="glyphicon glyphicon-time"></i>
+                </span>
+                <span>what time is it?</span>
+              </a>
+          </li>
+          <li>
+            <a href="slidey.html">
+                <span class="icon">
+                  <i aria-hidden="true" class="glyphicon glyphicon-picture"></i>
+                </span>
+                <span>slidey</span>
+              </a>
+          </li>
+          <li>
+            <a href="lightbox.html">
+                <span class="icon">
+                  <i aria-hidden="true" class="glyphicon glyphicon-modal-window"></i>
+                </span>
+                <span>lightbox</span>
+              </a>
+          </li>
+          <li>
+            <a href="these2.html">
+                <span class="icon">
+                  <i aria-hidden="true" class="glyphicon glyphicon-ban-circle"></i>
+                </span>
+                <span>these 2</span>
+              </a>
+          </li>
+          <li>
+            <a href="dontwork.html">
+                <span class="icon">
+                  <i aria-hidden="true" class="glyphicon glyphicon-ban-circle"></i>
+                </span>
+                <span>don't work</span>
+              </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div>
+      <br><br><br>
+      <table id="main" class="table-fixed" id="myTable" width="100%">
+        <tbody>
+          <tr>
+            <td class="timebg">
+              <ul class="jquery-clock small white" data-jquery-clock="">
+                <li class="jquery-clock-pin"></li>
+                <li class="jquery-clock-sec"></li>
+                <li class="jquery-clock-min"></li>
+                <li class="jquery-clock-hour"></li>
+              </ul>
+            </td>
+
+            <td class="transitions">
+              <h1>For those that don't care for analog:</h1>
+              <div id="time"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- /container -->
+
+</body>
+
+
+</html>
